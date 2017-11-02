@@ -8,11 +8,11 @@
   <name>lambda-s3-email-service</name>
 
   <scm>
-    <url>https://github.com/KedosConsultingLtd/lambda-s3-emailer/</url>
-    <connection>git@github.com:KedosConsultingLtd/lambda-s3-emailer.git</connection>
+    <url>https://github.com/KedosConsultingLtd/lambda-s3-emailer</url>
+    <connection>scm:git:git://github.com/KedosConsultingLtd/lambda-s3-emailer.git</connection>
+    <developerConnection>scm:git:git@github.com:KedosConsultingLtd/lambda-s3-emailer.git</developerConnection>
   </scm>
-
-
+  
   <dependencies>
     <dependency>
       <groupId>com.amazonaws</groupId>
