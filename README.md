@@ -1,6 +1,8 @@
 # lambda-s3-emailer
 Java Lambda function that consumes S3 Events and emails a link to the file (an optionally attaches the file) to specified addresses via SendGrid.
 
+[ ![Codeship Status for KedosConsultingLtd/lambda-s3-emailer](https://app.codeship.com/projects/3926a880-a201-0135-e532-72d3683f35d8/status?branch=master)](https://app.codeship.com/projects/254576)
+
 # Environment Properties
 The following properties can be set within the Lambda environment variables to configure the behaviour.
 
