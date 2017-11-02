@@ -4,14 +4,14 @@
   <groupId>uk.co.kedos.cloud</groupId>
   <artifactId>lambda-s3-emailer</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0-RELEASE</version>
   <name>lambda-s3-email-service</name>
 
   <scm>
     <url>https://github.com/KedosConsultingLtd/lambda-s3-emailer</url>
     <connection>scm:git:git://github.com/KedosConsultingLtd/lambda-s3-emailer.git</connection>
     <developerConnection>scm:git:git@github.com:KedosConsultingLtd/lambda-s3-emailer.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>v1.0.0-RELEASE</tag>
   </scm>
 
   <dependencies>
