@@ -4,8 +4,13 @@ Java Lambda function that consumes S3 Events and emails a link to the file (an o
 # Environment Properties
 The following properties can be set within the Lambda environment variables to configure the behaviour.
 
+AWS authorisation will be automatically inherited if this is running inside of Lambda (so ensure it has a policy that allows access to read from the S3 bucket).  If you're running it outside of Lambda, please set the AWS environment variables listed below.
+
 | Variable Name | Type | Description | Supports Variables | Default |
 | ------------- | ---- | ----------- | ------------------ | ------- |
+| SENDGRID_API_KEY | String | API Key for Sendgrid, used to send the emails | No | None |
+| AWS_ACCESS_KEY_ID | String | API Key for AWS. Used to access S3. (Shouldn't be required if run in Lambda) | No | None |
+| AWS_SECRET_ACCESS_KEY | String | API Secret Key for AWS. Used to access S3. (Shouldn't be required if run in Lambda) | No | None |
 | EXPIRY_DAYS   | Integer | Number of days that the S3 link should be valid for. | No | 7 |
 | MAX_ATTACHMENT_FILE_SIZE | Integer | Maximum file size that will be sent as an attachment.  If the file is larger the email will only contain a link | No | 5242880 |
 | FROM_EMAIL_OVERRIDE | String | Email address to be used as the from address | No | no_reply@s3-upload.aws | 
