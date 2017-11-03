@@ -1,7 +1,50 @@
 # lambda-s3-emailer
 Java Lambda function that consumes S3 Events and emails a link to the file (an optionally attaches the file) to specified addresses via SendGrid.
 
+# Build
+
 [ ![Codeship Status for KedosConsultingLtd/lambda-s3-emailer](https://app.codeship.com/projects/3926a880-a201-0135-e532-72d3683f35d8/status?branch=master)](https://app.codeship.com/projects/254576)
+
+# Download
+
+[ ![Download](https://api.bintray.com/packages/kedosconsultingltd/lambda-s3-emailer/lambda-s3-emailer/images/download.svg) ](https://bintray.com/kedosconsultingltd/lambda-s3-emailer/lambda-s3-emailer/_latestVersion)
+
+# Maven
+Until it's added to maven central you'll need to add the following profile in your settings.xml
+```
+<?xml version="1.0" encoding="UTF-8" ?>
+<settings xsi:schemaLocation='http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd'
+          xmlns='http://maven.apache.org/SETTINGS/1.0.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+    
+    <profiles>
+        <profile>
+            <repositories>
+                <repository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>bintray-kedosconsultingltd-lambda-s3-emailer</id>
+                    <name>bintray</name>
+                    <url>https://dl.bintray.com/kedosconsultingltd/lambda-s3-emailer</url>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>bintray</activeProfile>
+    </activeProfiles>
+</settings>
+```
+
+Then the dependency is as follows:
+```
+<dependency>
+  <groupId>uk.co.kedos.cloud</groupId>
+  <artifactId>lambda-s3-emailer</artifactId>
+  <version>1.0.1</version>
+  <type>pom</type>
+</dependency>
+```
 
 # Environment Properties
 The following properties can be set within the Lambda environment variables to configure the behaviour.
