@@ -28,6 +28,17 @@ Until it's added to maven central you'll need to add the following profile in yo
                     <url>https://dl.bintray.com/kedosconsultingltd/lambda-s3-emailer</url>
                 </repository>
             </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>bintray-kedosconsultingltd-lambda-s3-emailer</id>
+                    <name>bintray-plugins</name>
+                    <url>https://dl.bintray.com/kedosconsultingltd/lambda-s3-emailer</url>
+                </pluginRepository>
+            </pluginRepositories>
+            <id>bintray</id>
         </profile>
     </profiles>
     <activeProfiles>
