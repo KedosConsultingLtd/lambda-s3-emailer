@@ -69,9 +69,10 @@ AWS authorisation will be automatically inherited if this is running inside of L
 | AWS_SECRET_ACCESS_KEY | String | API Secret Key for AWS. Used to access S3. (Shouldn't be required if run in Lambda) | No | None |
 | EXPIRY_DAYS   | Integer | Number of days that the S3 link should be valid for. | No | 7 |
 | MAX_ATTACHMENT_FILE_SIZE | Integer | Maximum file size that will be sent as an attachment.  If the file is larger the email will only contain a link | No | 5242880 |
+| EMAIL_OVERRIDE | String | 'To' address that the email address will be sent to | No | test@test.com |
 | FROM_EMAIL_OVERRIDE | String | Email address to be used as the from address | No | no_reply@s3-upload.aws | 
 | EMAIL_SUBJECT_OVERRIDE | String | Subject of the email.  Allows variables to be substituted in | Yes | File Uploaded to S3 - ${eventTimestamp} |
-| EMAIL_OVERRIDE | String | Body of the email (HTML).  Allows variables to be substituted in | Yes | ``` <body>A new file has been uploaded to S3. <br/>Bucket: ${bucketName} <br/>Name: ${key} <br/> <a href='${url}'>Click to Download</a> <br/> The above link will be valid for ${expiryDays} days and will not work after ${expiryDate}. <br/> If the file is less than ${maxFileSize} bytes it will be attached to this email.</body> </code> ``` |
+| EMAIL_BODY | String | Body of the email (HTML).  Allows variables to be substituted in | Yes | ``` <body>A new file has been uploaded to S3. <br/>Bucket: ${bucketName} <br/>Name: ${key} <br/> <a href='${url}'>Click to Download</a> <br/> The above link will be valid for ${expiryDays} days and will not work after ${expiryDate}. <br/> If the file is less than ${maxFileSize} bytes it will be attached to this email.</body> </code> ``` |
 | CC_LIST | String | Comma separated list of email addresses to be CC'd in to the email | No | (blank) |
 
 The following values can be used as variables in the properties that support it.  Parameters should be in the following style: ${paramName}
